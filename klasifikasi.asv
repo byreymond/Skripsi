@@ -492,7 +492,7 @@ load training.mat;
 citra_resized = 300;
 img=imread(pgambar);
 
-%img = imresize(img, [NaN citra_resized]);
+img = imresize(img, [NaN citra_resized]);
 
 %img=double(rgb2ycbcr(img));
 
@@ -577,7 +577,7 @@ totalNumberOfPixels = blackcount + whitecount;
  percentBlackPixels = 100.0 * blackcount / totalNumberOfPixels;
  percentWhitePixels = 100.0 * whitecount / totalNumberOfPixels;
 
-info7 = sprintf('Pixel hitam = %d               Luas Background = %.3f%% Pixel putih = %d\nPersentase Luas Area Pemukiman = %.3f%%', ... 
+info7 = sprintf('Pixel hitam = %d Luas Background = %.3f%% Pixel putih = %d\n\nPersentase Luas Area Pemukiman = %.3f%%', ... 
    blackcount, percentBlackPixels, ... 
    whitecount, percentWhitePixels);
 set(handles.output7,'string',info7);
@@ -596,7 +596,7 @@ totalNumberOfPixels = blackcount + whitecount;
  percentBlackPixels = 100.0 * blackcount / totalNumberOfPixels;
  percentWhitePixels = 100.0 * whitecount / totalNumberOfPixels;
 
-info8= sprintf('Pixel hitam = %d                   Luas Background = %.3f%% Pixel Putih = %d\nPersentase Luas Area Perairan= %.3f%%', ... 
+info8= sprintf('Pixel hitam = %d\nLuas Background = %.3f%% Pixel Putih = %d\n\nPersentase Luas Area Perairan= %.3f%%', ... 
    blackcount, percentBlackPixels, ... 
    whitecount, percentWhitePixels);
 set(handles.output8,'string',info8);
@@ -615,7 +615,7 @@ totalNumberOfPixels = blackcount + whitecount;
  percentBlackPixels = 100.0 * blackcount / totalNumberOfPixels;
  percentWhitePixels = 100.0 * whitecount / totalNumberOfPixels;
 
-info11 = sprintf('Pixel hitam = %d                 Luas Background = %.3f%%\nPixel Putih = %d\nPersentase Luas Area background= %.3f%%', ... 
+info11 = sprintf('Pixel hitam = %d             Luas Background = %.3f%%\nPixel Putih = %d\nPersentase Luas Area background= %.3f%%', ... 
    blackcount, percentBlackPixels, ... 
    whitecount, percentWhitePixels);
 
